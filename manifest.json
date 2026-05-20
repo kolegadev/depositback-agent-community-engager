@@ -1,0 +1,18 @@
+{
+  "workflow_id": "depositback-agent-community-engager-default",
+  "version": "1.0.0",
+  "agent": "community-engager",
+  "created": "2026-05-20T18:04:46.966073",
+  "description": "Default health-check workflow for Community Engager",
+  "steps": [
+    {
+      "id": "health_check",
+      "skill": "noop",
+      "params": {
+        "message": "Community Engager is operational"
+      }
+    }
+  ],
+  "on_success": "Write result to data/outbox/",
+  "on_failure": "Update state.json with error status"
+}
